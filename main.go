@@ -16,6 +16,7 @@ func main() {
 	input := bufio.NewScanner(os.Stdin)
 	cache := pokecache.NewCache(5 * time.Second)
 	cfg := config.NewConfig(cache)
+
 	for {
 		fmt.Print("Pokedex > ")
 		input.Scan()
@@ -25,7 +26,7 @@ func main() {
 		}
 		text := input.Text()
 		textLower := strings.ToLower(text)
-		clearedText := cleanInput(textLower)
+		clearedText := strings.Fields(textLower)
 		command, ok := commands[clearedText[0]]
 		if !ok {
 			fmt.Println("Unknown command")
@@ -35,8 +36,4 @@ func main() {
 			fmt.Println(err)
 		}
 	}
-}
-
-func cleanInput(text string) []string {
-	return strings.Fields(text)
 }

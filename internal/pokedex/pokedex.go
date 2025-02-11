@@ -1,5 +1,5 @@
 package pokedex
 
-import "github.com/karaMuha/pokedex/internal/pokeapi"
+import "github.com/karaMuha/pokedex/internal/models"
 
-var Pokedex = make(map[string]pokeapi.Pokemon)
+var Pokedex = make(map[string]models.Pokemon)
