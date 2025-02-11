@@ -1,7 +1,7 @@
 # About
 This project is my solution to the first golang challenge on [boot.dev](https://boot.dev)
 
-This is a command-line pokemon game! Clone the code and run `go run .`
+go-pokemon is a command-line pokemon game! Clone the code and run `go run .`
 
 Supported commands so far:
 - help: Displays the supported commands
